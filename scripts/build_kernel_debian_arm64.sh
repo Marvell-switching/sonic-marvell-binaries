@@ -30,6 +30,7 @@ build_deb()
         if [ -f $f ]
         then
             echo "Packing $f"
+            [ 
             cp -v $f ${TMP}/boot/
         else
             echo "ERROR: $f NOT found"
@@ -62,7 +63,7 @@ build_deb()
     i=0
     for f in ${MISC_DIR[*]}
     do
-        echo "Adding Misc $f to ${MISC_PATH[$i]}"
+        echo "Adding Misc $f to ${MISC_DIR[$i]}"
         cp -drv $f ${TMP}/
         i=$((i+1))
     done
