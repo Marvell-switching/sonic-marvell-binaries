@@ -49,6 +49,7 @@ build_deb()
     do
         echo "Adding kernel $f"
         mkdir -p ${TMP}/etc/modules-load.d/
+        echo "$f" >> ${TMP}/etc/modules-load.d/marvell.conf
     done
     i=0
     for f in ${MISC_FILES[*]}
@@ -69,7 +70,6 @@ build_deb()
     # i2c-dev is missing in modules
     mkdir -p ${TMP}/etc/modules-load.d/
     echo "i2c-dev" >> ${TMP}/etc/modules-load.d/marvell.conf
-    echo "$f" >> ${TMP}/etc/modules-load.d/marvell.conf
     mkdir -p ${TMP}/etc/sysctl.d/
     echo "sysctl -w net.ipv4.neigh.default.gc_thresh1=16000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
     echo "sysctl -w net.ipv4.neigh.default.gc_thresh2=32000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
