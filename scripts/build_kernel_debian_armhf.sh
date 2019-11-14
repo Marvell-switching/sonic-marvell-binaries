@@ -71,12 +71,12 @@ build_deb()
     mkdir -p ${TMP}/etc/modules-load.d/
     echo "i2c-dev" >> ${TMP}/etc/modules-load.d/marvell.conf
     mkdir -p ${TMP}/etc/sysctl.d/
-    echo "sysctl -w net.ipv4.neigh.default.gc_thresh1=16000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
-    echo "sysctl -w net.ipv4.neigh.default.gc_thresh2=32000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
-    echo "sysctl -w net.ipv4.neigh.default.gc_thresh3=48000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
-    echo "sysctl -w net.ipv6.neigh.default.gc_thresh1=8000 "    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
-    echo "sysctl -w net.ipv6.neigh.default.gc_thresh2=16000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
-    echo "sysctl -w net.ipv6.neigh.default.gc_thresh3=32000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv4.neigh.default.gc_thresh1=16000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv4.neigh.default.gc_thresh2=32000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv4.neigh.default.gc_thresh3=48000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv6.neigh.default.gc_thresh1=8000 "    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv6.neigh.default.gc_thresh2=16000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
+    echo "net.ipv6.neigh.default.gc_thresh3=32000"    >> ${TMP}/etc/sysctl.d/98-sysctl.conf
     FW_ENV='/dev/mtd0 \t\t 0x00500000 \t 0x80000 \t 0x100000 \t 8'
     echo -e $FW_ENV > ${TMP}/etc/fw_env.config
 
