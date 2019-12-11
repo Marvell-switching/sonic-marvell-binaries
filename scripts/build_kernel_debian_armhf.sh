@@ -6,9 +6,9 @@ declare -a MOD_NAMES
 declare -a MISC_FILES
 declare -a MISC_PATH
 
-FILES=(zImage armada-385-ET6448M_4G_Nand.dtb)
-MODULES=(mvDmaDrv.ko)
-MOD_NAMES=(mvDmaDrv)
+FILES=(zImage armada-385-ET6448M_4G_Nand.dtb armada-385-ET6448M_4G_Nand_r2019.dtb)
+MODULES=(mvDmaDrv.ko mvDmaDrv_r1.ko)
+MOD_NAMES=(mvDmaDrv mvDmaDrv_r1)
 MISC_FILES=(eeprom)
 MISC_PATH=(/etc/sonic/)
 MISC_DIR=(lib)
