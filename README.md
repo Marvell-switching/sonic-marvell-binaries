@@ -1,7 +1,7 @@
 -# sonic-marvell-binaries
 -Sonic binaries for Marvell Platform
 
-
+```
 .
 |-- amd64
 |   `-- sai-plugin                              x86_64-marvell_db98cx8580_16cd-r0/ x86_64-marvell_db98cx8580_32cd-r0/
@@ -32,4 +32,4 @@
     |-- build_debian_package.sh
     |-- build_kernel_debian_arm64.sh
     `-- build_kernel_debian_armhf.sh
-
+```
