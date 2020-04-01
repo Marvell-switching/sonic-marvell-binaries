@@ -25,6 +25,8 @@ build_deb()
     mkdir -p ${TMP}/DEBIAN
     mkdir -p ${TMP}/boot/
     mkdir -p ${TMP}/lib/modules/${VERSION}/
+    mkdir -p ${TMP}/lib/modules/4.9.0-11-2-armmp/
+    mkdir -p ${TMP}/lib/modules/4.9.0-9-2-armmp/
     for f in ${FILES[*]}
     do
         if [ -f $f ]

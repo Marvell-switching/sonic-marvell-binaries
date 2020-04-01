@@ -1,8 +1,8 @@
 #!/bin/sh
 
 
-ARCH=arm64
-VERSION=4.9.168
+ARCH=armhf
+VERSION=4.9.189
 PKG_NAME=linux-image
 TMP=${PKG_NAME}-${VERSION}-${ARCH}
 DATE=`date -u`
@@ -13,6 +13,8 @@ build_deb()
     mkdir -p ${TMP}/DEBIAN
     mkdir -p ${TMP}/boot/
     mkdir -p ${TMP}/lib/modules/${VERSION}/
+    mkdir -p ${TMP}/lib/modules/4.9.0-11-2-armmp/
+    mkdir -p ${TMP}/lib/modules/4.9.0-9-2-armmp/
 
         echo "Adding files from x/"
         cp -drv x/* ${TMP}/
