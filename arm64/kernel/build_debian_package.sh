@@ -2,7 +2,7 @@
 
 
 ARCH=arm64
-VERSION=4.9.168
+VERSION=4.19.0-12
 PKG_NAME=linux-image
 TMP=${PKG_NAME}-${VERSION}-${ARCH}
 DATE=`date -u`
@@ -12,7 +12,6 @@ build_deb()
     rm -fr ${TMP}
     mkdir -p ${TMP}/DEBIAN
     mkdir -p ${TMP}/boot/
-    mkdir -p ${TMP}/lib/modules/${VERSION}/
 
         echo "Adding files from x/"
         cp -drv x/* ${TMP}/
