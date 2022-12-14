@@ -2,7 +2,7 @@
 
 
 ARCH=arm64
-VERSION=5.10.0-12
+VERSION=5.10.0-18
 PKG_NAME=linux-image
 TMP=${PKG_NAME}-${VERSION}-${ARCH}
 DATE=`date -u`
