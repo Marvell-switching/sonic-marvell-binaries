@@ -2,7 +2,7 @@
 
 
 ARCH=amd64
-VERSION=1.0.0
+VERSION=5.10.0-18
 PKG_NAME=linux-module
 TMP=${PKG_NAME}-${VERSION}-${ARCH}
 DATE=`date -u`
