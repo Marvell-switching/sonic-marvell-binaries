@@ -5,7 +5,9 @@
 
 ## Sonic binaries for Marvell Platform
 
-This repo is used by the SONiC build with only the **master** git branch checked out.
+This repo **sonic-marvell-binaries** is the **pool** of mrvllibsa-X.deb source files (SRC) for SONiC build process as **consumer**.
+
+The SRC pool has only one working branch ~ **master** used by different consumers ~ SONIC branches (master, 202605, 202511,..).
 
 Each architecture **`<arch>/sai-plugin/master/`** contains a flat pool of every `mrvllibsai_*_<arch>.deb` Marvell has released, regardless of SONiC branch.
 Paths such as **`<arch>/sai-plugin/202505/`** (and other per-SONiC-branch names in the tree below) hold copies from the matching `master/`
